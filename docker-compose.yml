@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:19beta4
+    container_name: pg19_bitemporal
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: assignment1
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
